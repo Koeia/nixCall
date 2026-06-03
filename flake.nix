@@ -1,5 +1,5 @@
 {
-    description = "NixOS from Scratch";
+    description = "Nix flake";
 
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable";
