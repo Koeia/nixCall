@@ -8,9 +8,11 @@
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    networking.hostName = "nightDesk"; 
-    services.getty.autologinUser = "jctannu4";
+    networking.hostName = "nixCall"; 
     networking.networkmanager.enable = true;
+    hardware.bluetooth.enable = true;
+    services.power-profiles-daemon.enable = true;
+    services.upower.enable = true;
 
     time.timeZone = "America/New_york";
 
@@ -22,33 +24,29 @@
     users.users.jctannu4 = {
         isNormalUser = true;
         extraGroups = [ "wheel"];
+	shell = pkgs.zsh;
         packages = with pkgs; [
         tree
         ];
     };
-	fileSystems = {
-  		"/".options = [ "compress=zstd" ];
-  		"/home".options = [ "compress=zstd" ];
- 		"/nix".options = [ "compress=zstd" "noatime" ];
-  		"/swap".options = [ "noatime" ];
-	};
+    
+    services.tailscale.enable = true;
 
-	services.btrfs.autoScrub = {
-  		enable = true;
-  		interval = "monthly";
-  		fileSystems = [ "/" ];
-	};
-
-   services.openssh.enable = true ; 
+    services.openssh.enable = true; 
     programs.firefox.enable = true;
+    programs.zsh.enable = true;
+    
     environment.systemPackages = with pkgs; [
-		gcc
-		vim
+	gcc
+	kitty
+	git
+	vim
         wget
         curl
         alacritty
         waybar
-		neovim
+	neovim
+	quickshell
     ];  
  	fonts.packages = with pkgs; [
     	nerd-fonts.jetbrains-mono
