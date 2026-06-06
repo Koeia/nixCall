@@ -6,11 +6,13 @@
     home.stateVersion = "26.05";
     programs.git = { 
 	enable = true;
-	userName = "Koeia";
-	userEmail = "whereischason@protonmail.com";
-  	extraConfig = {
-    init.defaultBranch = "main";
-	core.editor = "vim";
+  	settings = {
+	user = {
+            name =  "Koeia";
+	    email = "whereischason@protonmail.com";
+	};
+    	    init.defaultBranch = "main";
+	    core.editor = "vim";
   };
 };
 

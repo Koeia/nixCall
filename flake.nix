@@ -11,12 +11,13 @@
 	    url = "github:noctalia-dev/noctalia-shell";
 	    inputs.nixpkgs.follows = "nixpkgs";
 		};
-  	sops-nix = { 
+	sops-nix = { 
 	    url = "github:Mic92/sops-nix";
-  	    inputs.nixpkgs.follows = "nixpkgs";
+	    inputs.nixpkgs.follows = "nixpkgs";
 	};
+};	
 
-    outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+    outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, ... }: {
         nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 	    specialArgs = { inherit inputs; };
@@ -35,4 +36,5 @@
                 ];
             };
         };
+   
 }
