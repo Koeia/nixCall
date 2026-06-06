@@ -14,7 +14,7 @@
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
 
-    time.timeZone = "America/New_york";
+    time.timeZone = "America/New_York";
 
     programs.hyprland = {
         enable = true;
@@ -47,6 +47,7 @@
         waybar
 	neovim
 	quickshell
+	fastfetch
     ];  
  	fonts.packages = with pkgs; [
     	nerd-fonts.jetbrains-mono

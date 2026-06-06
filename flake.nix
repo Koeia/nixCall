@@ -14,7 +14,7 @@
 	};
 
     outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-        nixosConfigurations.nixosbtw = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 	    specialArgs = { inherit inputs; };
             modules = [
