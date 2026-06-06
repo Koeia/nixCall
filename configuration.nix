@@ -30,9 +30,7 @@
         ];
     };
     
-    services.tailscale.enable = true;
 
-    services.openssh.enable = true; 
     services.tailscale.enable = true;
     services.openssh.enable = true ; 
     programs.firefox.enable = true;
