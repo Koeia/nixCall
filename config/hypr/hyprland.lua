@@ -34,9 +34,7 @@ local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 
 
-hl.on("hyprland.start", function () 
-  hl.exec_cmd("noctalia-shell")
-end)
+local startup_commands = { "noctalia-shell", }
 
 
 -------------------------------
