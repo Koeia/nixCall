@@ -29,15 +29,12 @@
         tree
         ];
     };
-<<<<<<< HEAD
     
     services.tailscale.enable = true;
 
     services.openssh.enable = true; 
-=======
-	services.tailscale.enable = true;
-   services.openssh.enable = true ; 
->>>>>>> 4e8f603841fcc9fcc82aebe962244d184014b9d8
+    services.tailscale.enable = true;
+    services.openssh.enable = true ; 
     programs.firefox.enable = true;
     programs.zsh.enable = true;
     
