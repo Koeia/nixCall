@@ -30,7 +30,7 @@
         ];
     };
     
-
+    services.udisks2.enable = true;
     services.tailscale.enable = true;
     services.openssh.enable = true ; 
     programs.firefox.enable = true;
@@ -47,7 +47,10 @@
         waybar
 	neovim
 	quickshell
-	fastfetch
+	kdePackages.dolphin
+	udiskie
+	usbutils	
+	yazi
     ];  
  	fonts.packages = with pkgs; [
     	nerd-fonts.jetbrains-mono

@@ -19,7 +19,7 @@ hl.monitor({
     output   = "",
     mode     = "preferred",
     position = "auto",
-    scale    = "0.5",
+    scale    = "1",
 })
 
 
@@ -33,9 +33,9 @@ local browser	  = "firefox"
 local fileManager = "dolphin"
 local menu        = "hyprlauncher"
 
-
-local startup_commands = { "noctalia-shell", }
-
+hl.on("hyprland.start", function()
+	hl.exec_cmd("bash ~/nixos-dotfiles/config/hypr/startup.sh")
+end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
