@@ -50,6 +50,7 @@
     alacritty
     waybar
     neovim
+    zed-editor
     quickshell
     kdePackages.dolphin
     brightnessctl
