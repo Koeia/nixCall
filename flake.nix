@@ -7,15 +7,15 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
             };
-	noctalia = {
-	    url = "github:noctalia-dev/noctalia-shell";
-	    inputs.nixpkgs.follows = "nixpkgs";
-		};
-	sops-nix = { 
+        noctalia = {
+            url = "github:noctalia-dev/noctalia-shell";
+            inputs.nixpkgs.follows = "nixpkgs";
+            };
+	sops-nix = {
 	    url = "github:Mic92/sops-nix";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	};
-};	
+};
 
     outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, ... }: {
         nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
@@ -26,7 +26,7 @@
                 ./configuration.nix
 		sops-nix.nixosModules.sops
                 home-manager.nixosModules.home-manager {
-                    home-manager = { 
+                    home-manager = {
                         useGlobalPkgs = true;
                         useUserPackages = true;
                         users.jctannu4 = import ./home.nix;
@@ -36,5 +36,5 @@
                 ];
             };
         };
-   
+
 }

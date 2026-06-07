@@ -51,6 +51,8 @@
     waybar
     neovim
     zed-editor
+    nil
+    nixd
     quickshell
     kdePackages.dolphin
     brightnessctl
