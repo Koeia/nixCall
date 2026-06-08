@@ -41,7 +41,7 @@
                 warningThreshold = 30;
               }
               {
-                formatHorizontal = "HH:mm";
+                formatHorizontal = "HH:mm AP";
                 formatVertical = "HH mm";
                 id = "Clock";
                 useMonospacedFont = true;
@@ -85,6 +85,7 @@
         location = {
           monthBeforeDay = true;
           name = "Rocky Mount, North Carolina";
+          use12hourFormat = true;
         };
       };
     };
