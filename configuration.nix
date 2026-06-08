@@ -47,6 +47,7 @@
     libsecret
     hyprpolkitagent
     keyd
+    package-version-server
     git
     vim
     wget
