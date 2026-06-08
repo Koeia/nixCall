@@ -27,6 +27,11 @@
   };
   programs.zsh = {
     enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting = {
+      enable = true;
+    };
     shellAliases = {
       btw = "echo i use nixos, btw";
       update = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixCall";
