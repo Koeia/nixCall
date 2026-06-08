@@ -1,3 +1,4 @@
+--comment
 hl.monitor({
     output   = "",
     mode     = "preferred",
