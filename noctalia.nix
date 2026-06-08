@@ -57,7 +57,7 @@
         };
         wallpaper = {
           enabled = true;
-          directory = "~/Wallpapers";
+          directory = "./Wallpapers";
           monitorDirectories = [ ];
           viewMode = "single";
           setWallpaperOnAllMonitors = true;
