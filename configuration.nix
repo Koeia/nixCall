@@ -43,6 +43,8 @@
   environment.systemPackages = with pkgs; [
     gcc
     kitty
+    git-credential-manager
+    libsecret
     git
     vim
     wget
