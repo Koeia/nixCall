@@ -45,6 +45,8 @@
     kitty
     git-credential-manager
     libsecret
+    hyprpolkitagent
+    keyd
     git
     vim
     wget
