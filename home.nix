@@ -21,9 +21,9 @@
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 10;
+    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "mochaDark";
+    size = 12;
   };
   programs.zsh = {
     enable = true;
@@ -33,7 +33,6 @@
       enable = true;
     };
     shellAliases = {
-      btw = "echo i use nixos, btw";
       update = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixCall";
     };
     initContent = ''

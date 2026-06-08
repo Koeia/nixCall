@@ -15,9 +15,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("bash ~/nixos-dotfiles/config/hypr/startup.sh")
 end)
 
-hl.env("XCURSOR_SIZE", "12")
-hl.env("HYPRCURSOR_SIZE", "12")
-
 
 hl.config({
     general = {
