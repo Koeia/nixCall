@@ -8,7 +8,7 @@
   programs.git = {
     enable = true;
     settings = {
-      credential.helper = "libsecret";
+      credential.helper = "oauth";
       user = {
         name = "Koeia";
         email = "whereischason@protonmail.com";
@@ -48,6 +48,9 @@
   home.file.".config/hypr".source = ./config/hypr;
 
   home.packages = with pkgs; [
+    git
+    git-credential-manager
+    git-credential-oauth
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [
