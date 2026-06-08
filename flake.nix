@@ -1,40 +1,49 @@
 {
-    description = "Nix flake";
+  description = "Nix flake";
 
-    inputs = {
-        nixpkgs.url = "nixpkgs/nixos-unstable";
-        home-manager = {
-            url = "github:nix-community/home-manager";
-            inputs.nixpkgs.follows = "nixpkgs";
-            };
-        noctalia = {
-            url = "github:noctalia-dev/noctalia-shell";
-            inputs.nixpkgs.follows = "nixpkgs";
-            };
-	sops-nix = {
-	    url = "github:Mic92/sops-nix";
-	    inputs.nixpkgs.follows = "nixpkgs";
-	};
-};
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
-    outputs = inputs@{ self, nixpkgs, home-manager, sops-nix, ... }: {
-        nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-	    specialArgs = { inherit inputs; };
-            modules = [
-	    	./noctalia.nix
-                ./configuration.nix
-		sops-nix.nixosModules.sops
-                home-manager.nixosModules.home-manager {
-                    home-manager = {
-                        useGlobalPkgs = true;
-                        useUserPackages = true;
-                        users.jctannu4 = import ./home.nix;
-                        backupFileExtension = "backup";
-                        };
-                    }
-                ];
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      sops-nix,
+      ...
+    }:
+    {
+      nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./noctalia.nix
+          ./configuration.nix
+          sops-nix.nixosModules.sops
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.jctannu4 = import ./home.nix;
+              backupFileExtension = "backup";
             };
-        };
+          }
+        ];
+      };
+    };
 
 }
