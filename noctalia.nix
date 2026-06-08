@@ -9,9 +9,10 @@
       enable = true;
       settings = {
         bar = {
+          backgroundOpacity = 0;
           density = "compact";
           position = "top";
-          showCapsule = false;
+          showCapysule = false;
           widgets = {
             left = [
               {
@@ -57,17 +58,17 @@
           linkLightAndDarkWallpapers = true;
           fillMode = "crop";
           brightness = {
-          brightnessStep = 5;
-          enforceMinimum = true;
-          enableDdcSupport = false;
-          backlightDeviceMappings = [ ];
-            };
-	};
-	colorSchemes = {
+            brightnessStep = 5;
+            enforceMinimum = true;
+            enableDdcSupport = false;
+            backlightDeviceMappings = [ ];
+          };
+        };
+        colorSchemes = {
           useWallpaperColors = true;
           darkMode = true;
-	};
-	general = {
+        };
+        general = {
           avatarImage = "/home/jctannu4/.face";
           radiusRatio = 0.2;
         };

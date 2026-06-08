@@ -55,6 +55,7 @@
 
   environment.systemPackages = with pkgs; [
     gcc
+    fuzzel
     kitty
     git-credential-manager
     libsecret
