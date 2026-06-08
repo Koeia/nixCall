@@ -36,6 +36,11 @@
             ];
             right = [
               {
+                id = "AudioVisulizer";
+                width = 80;
+                hideWhenIdle = true;
+              }
+              {
                 alwaysShowPercentage = true;
                 id = "Battery";
                 warningThreshold = 30;
@@ -52,7 +57,7 @@
         };
         wallpaper = {
           enabled = true;
-          directory = "~/Wallpapers";
+          directory = "./Wallpapers";
           monitorDirectories = [ ];
           viewMode = "single";
           setWallpaperOnAllMonitors = true;
