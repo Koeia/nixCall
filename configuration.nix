@@ -78,7 +78,7 @@
     nodejs
     quickshell
     pass
-    gpg
+    gnupg
     kdePackages.dolphin
     brightnessctl
     udiskie
