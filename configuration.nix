@@ -77,8 +77,6 @@
     lua-language-server
     nodejs
     quickshell
-    pass
-    gnupg
     kdePackages.dolphin
     brightnessctl
     udiskie
