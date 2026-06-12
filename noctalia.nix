@@ -86,6 +86,12 @@
           monthBeforeDay = true;
           name = "Rocky Mount, North Carolina";
           use12hourFormat = true;
+          useFahrenheit = true;
+        };
+        idle = {
+          enabled = true;
+          lockTimeout = 60;
+          lockCommand = "noctalia-shell ipc call lockScreen lock";
         };
       };
     };
