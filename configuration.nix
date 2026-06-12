@@ -8,6 +8,7 @@
 
 {
   imports = [
+    ./services.nix
     ./hardware-configuration.nix
     ./lsps.nix
   ];
@@ -17,8 +18,6 @@
   networking.hostName = "nixCall";
   networking.networkmanager.enable = true;
   hardware.bluetooth.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
 
   time.timeZone = "America/New_York";
 
@@ -39,22 +38,6 @@
     ];
   };
 
-  services.udisks2.enable = true;
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            capslock = "esc";
-          };
-        };
-      };
-    };
-  };
-  services.tailscale.enable = true;
-  services.openssh.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
 
@@ -64,8 +47,6 @@
     kitty
     git-credential-manager
     libsecret
-    hyprpolkitagent
-    keyd
     package-version-server
     git
     vim
