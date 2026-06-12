@@ -10,6 +10,8 @@ local browser     = "zen"
 local fileManager = "alacritty -e yazi"
 local menu        = "fuzzel"
 local editor      = "zeditor"
+local monitor     = "noctalia-shell ipc call systemMonitor toggle"
+local lock        = "noctalia-shell ipc call lockScreen lock"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("bash ~/nixos-dotfiles/config/hypr/startup.sh")
@@ -157,6 +159,8 @@ hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lock))
+hl.bind(mainMod .. "SHIFT + M", hl.dsp.exec_cmd(monitor))
 
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
