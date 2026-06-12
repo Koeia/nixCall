@@ -36,6 +36,8 @@
         modules = [
           ./noctalia.nix
           ./configuration.nix
+          ./lsps.nix
+          ./services.nix
           sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
           {
