@@ -42,7 +42,7 @@
               }
               {
                 formatHorizontal = "h:mm AP";
-                formatVertical = "HH mm";
+                formatVertical = "h:mm AP";
                 id = "Clock";
                 useMonospacedFont = true;
                 usePrimaryColor = true;
@@ -81,6 +81,7 @@
         general = {
           avatarImage = "/home/jctannu4/.face";
           radiusRatio = 0.2;
+          clockFormat = "h:mm AP";
         };
         location = {
           monthBeforeDay = true;
