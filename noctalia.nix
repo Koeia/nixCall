@@ -13,7 +13,7 @@
           useSeparateOpacity = true;
           density = "compact";
           position = "top";
-          showCapysule = false;
+          showCapsule = false;
           widgets = {
             left = [
               {
@@ -52,7 +52,7 @@
         };
         wallpaper = {
           enabled = true;
-          directory = "./Wallpapers";
+          directory = "~/Wallpapers";
           monitorDirectories = [ ];
           viewMode = "single";
           setWallpaperOnAllMonitors = true;
@@ -66,13 +66,10 @@
           };
         };
         templates = {
-          activeTemplates = [
-            "hyprland"
-            "alacritty"
-            "fuzzel"
-            "yazi"
-            "zed"
-          ];
+          "yazi" = true;
+          "alacritty" = true;
+          "zed" = true;
+          enableUserTheming = true;
         };
         colorSchemes = {
           useWallpaperColors = true;
