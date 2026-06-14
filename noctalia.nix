@@ -69,6 +69,7 @@
           "yazi" = true;
           "alacritty" = true;
           "zed" = true;
+          "fuzzel" = true;
           enableUserTheming = true;
         };
         colorSchemes = {
