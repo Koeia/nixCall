@@ -6,7 +6,6 @@
     gcc
     nil
     nixd
-    bash
     nodejs
     lua-language-server
     llvmPackages_latest.clang
