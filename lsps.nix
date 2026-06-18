@@ -8,7 +8,10 @@
     nixd
     nodejs
     lua-language-server
+    typescript-language-server
+    typescript
     llvmPackages_latest.clang
+    python3
   ];
 
 }
