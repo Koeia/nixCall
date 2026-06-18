@@ -8,7 +8,7 @@
   programs.git = {
     enable = true;
     settings = {
-      credential.helper = "oauth";
+      credential.helper = "gnome-keyring";
       user = {
         name = "Koeia";
         email = "whereischason@protonmail.com";
