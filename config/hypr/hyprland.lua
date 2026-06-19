@@ -12,7 +12,7 @@ local menu        = "fuzzel"
 local editor      = "zeditor"
 local monitor     = "noctalia-shell ipc call systemMonitor toggle"
 local lock        = "noctalia-shell ipc call lockScreen lock"
-local nsWallpaper =  "noctalia-shell ipc call wallpaper toggle"
+local nsWallpaper = "noctalia-shell ipc call wallpaper toggle"
 local nsControl   = "noctalia-shell ipc call controlCenter toggle"
 
 hl.on("hyprland.start", function()
@@ -155,7 +155,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(nsWallpaper))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(nsControl))
+hl.bind(mainMod .. " + grave" hl.dsp.exec_cmd(nsControl))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit")) -- dwindle only
 
