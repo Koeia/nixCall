@@ -57,6 +57,10 @@
     udiskie
     usbutils
     yazi
+    yaziPlugins.drag
+    yaziPlugins.chmod
+    yaziPlugins.sudo
+    yaziPlugins.fullborder
     termius
   ];
 
