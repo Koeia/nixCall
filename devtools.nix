@@ -5,6 +5,7 @@
     nmap
     wireshark-cli
     unzip
+    jetbrains.webstorm
     btop
     gzip
   ];
