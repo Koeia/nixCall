@@ -60,7 +60,7 @@
     yaziPlugins.drag
     yaziPlugins.chmod
     yaziPlugins.sudo
-    yaziPlugins.fullborder
+    yaziPlugins.full-border
     termius
   ];
 
