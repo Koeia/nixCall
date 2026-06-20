@@ -70,6 +70,7 @@
           "alacritty" = true;
           "zed" = true;
           "fuzzel" = true;
+          "btop" = true;
           enableUserTheming = true;
         };
         colorSchemes = {
@@ -89,7 +90,7 @@
         };
         idle = {
           enabled = true;
-          lockTimeout = 60;
+          lockTimeout = 120;
           lockCommand = "noctalia-shell ipc call lockScreen lock";
         };
       };

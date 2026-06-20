@@ -4,5 +4,8 @@
     android-tools
     nmap
     wireshark-cli
+    unzip
+    btop
+    gzip
   ];
 }

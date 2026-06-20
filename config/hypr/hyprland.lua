@@ -10,6 +10,7 @@ local browser     = "zen"
 local fileManager = "alacritty -e yazi"
 local menu        = "fuzzel"
 local editor      = "zeditor"
+local nsCalendar  = "noctalia-shell ipc call calendar toggle"
 local monitor     = "noctalia-shell ipc call systemMonitor toggle"
 local lock        = "noctalia-shell ipc call lockScreen lock"
 local nsWallpaper = "noctalia-shell ipc call wallpaper toggle"
@@ -155,7 +156,9 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(nsWallpaper))
-hl.bind(mainMod .. " + grave" hl.dsp.exec_cmd(nsControl))
+hl.bind(mainMod .. " + Equal", hl.dsp.exec_cmd(nsCalendar))
+
+hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd(nsControl))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit")) -- dwindle only
 
