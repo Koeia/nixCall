@@ -4,6 +4,7 @@
     android-tools
     nmap
     wireshark-cli
+		jetbrains.gateway
     unzip
     jetbrains.webstorm
     btop
