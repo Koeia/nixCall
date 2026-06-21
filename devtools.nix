@@ -7,6 +7,7 @@
 		jetbrains.gateway
     unzip
     jetbrains.webstorm
+    jetbrains-toolbox
     btop
     gzip
     cmake
