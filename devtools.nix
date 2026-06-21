@@ -8,6 +8,8 @@
     unzip
     jetbrains.webstorm
     jetbrains-toolbox
+    keepass
+    keepassxc
     btop
     gzip
     cmake
