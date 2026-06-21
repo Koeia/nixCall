@@ -8,5 +8,6 @@
     jetbrains.webstorm
     btop
     gzip
+    cmake
   ];
 }
