@@ -3,7 +3,7 @@
 {
   imports = [
     ./services.nix
-    ./hardware-configuration.nix
+    /etc/nixos/hardware-configuration.nix
     ./lsps.nix
     ./devtools.nix
   ];
