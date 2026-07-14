@@ -30,7 +30,7 @@
       enable = true;
     };
     shellAliases = {
-      update = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixCall";
+      update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
     };
     initContent = ''
       		${pkgs.fastfetch}/bin/fastfetch

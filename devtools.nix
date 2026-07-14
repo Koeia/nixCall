@@ -13,5 +13,8 @@
     btop
     gzip
     cmake
+    gnumake
+    gcc
+    python3
   ];
 }

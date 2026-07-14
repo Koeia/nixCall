@@ -17,7 +17,7 @@ local nsWallpaper = "noctalia-shell ipc call wallpaper toggle"
 local nsControl   = "noctalia-shell ipc call controlCenter toggle"
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("bash ~/nixos-dotfiles/config/hypr/startup.sh")
+    hl.exec_cmd("noctalia-shell")
 end)
 
 
