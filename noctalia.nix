@@ -88,11 +88,6 @@
           use12hourFormat = true;
           useFahrenheit = true;
         };
-        idle = {
-          enabled = true;
-          lockTimeout = 120;
-          lockCommand = "noctalia-shell ipc call lockScreen lock";
-        };
       };
     };
   };

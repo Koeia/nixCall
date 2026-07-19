@@ -4,7 +4,7 @@
     android-tools
     nmap
     wireshark-cli
-		jetbrains.gateway
+    jetbrains.gateway
     unzip
     jetbrains.webstorm
     jetbrains-toolbox
@@ -13,8 +13,7 @@
     btop
     gzip
     cmake
+    zip
     gnumake
-    gcc
-    python3
   ];
 }

@@ -62,6 +62,7 @@
     yaziPlugins.sudo
     yaziPlugins.full-border
     termius
+    ledger-live-desktop
   ];
 
   fonts.packages = with pkgs; [
