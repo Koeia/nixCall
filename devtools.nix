@@ -2,7 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     android-tools
+    gnupg
     nmap
+    pass
+    pinentry-all
     wireshark-cli
     jetbrains.gateway
     unzip

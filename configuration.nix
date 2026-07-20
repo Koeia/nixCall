@@ -36,6 +36,12 @@
   programs.firefox.enable = true;
   programs.zsh.enable = true;
 
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = with pkgs; pinentry-all;
+    enableSSHSupport = true;
+  };
+
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     fuzzel
