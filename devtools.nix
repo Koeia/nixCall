@@ -15,6 +15,7 @@
     keepassxc
     btop
     gzip
+    glib
     cmake
     zip
     gnumake

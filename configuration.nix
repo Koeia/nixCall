@@ -71,6 +71,14 @@
     ledger-live-desktop
   ];
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      glib
+      libsecret
+    ];
+  };
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
