@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
 {
   home-manager.users.jctannu4 = {
     imports = [

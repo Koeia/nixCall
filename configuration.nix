@@ -6,6 +6,7 @@
     /etc/nixos/hardware-configuration.nix
     ./lsps.nix
     ./devtools.nix
+    ./pack.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -42,34 +43,33 @@
     enableSSHSupport = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    fuzzel
-    kitty
-    git-credential-manager
-    libsecret
-    gnome-keyring
-    package-version-server
-    git
-    vim
-    wget
-    curl
-    alacritty
-    waybar
-    zed-editor
-    quickshell
-    kdePackages.dolphin
-    brightnessctl
-    udiskie
-    usbutils
-    yazi
-    yaziPlugins.drag
-    yaziPlugins.chmod
-    yaziPlugins.sudo
-    yaziPlugins.full-border
-    termius
-    ledger-live-desktop
-  ];
+  # environment.systemPackages = with pkgs; [
+  #  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  #  fuzzel
+  #  kitty
+  #  git-credential-manager
+  #  libsecret
+  #  gnome-keyring
+  #  package-version-server
+  #  git
+  #  vim
+  #  wget
+  #  curl
+  #  alacritty
+  #  waybar
+  #  zed-editor
+  #  quickshell
+  #  brightnessctl
+  #  udiskie
+  #  usbutils
+  #  yazi
+  #  yaziPlugins.drag
+  #  yaziPlugins.chmod
+  #  yaziPlugins.sudo
+  #  yaziPlugins.full-border
+  #  termius
+  #  ledger-live-desktop
+  #];
 
   programs.nix-ld = {
     enable = true;
