@@ -2,14 +2,15 @@
 
 {
   environment.systemPackages = with pkgs; [
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     fuzzel
+    p7zip
     kitty
     git-credential-manager
     libsecret
     gnome-keyring
     package-version-server
     dolphin-emu
+    cemu
     worker
     git
     vim
