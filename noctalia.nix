@@ -41,8 +41,8 @@
                 warningThreshold = 30;
               }
               {
-                formatHorizontal = "h:mm AP";
-                formatVertical = "h:mm AP";
+                formatHorizontal = "hh:mm";
+                formatVertical = "hh:mm";
                 id = "Clock";
                 useMonospacedFont = true;
                 usePrimaryColor = true;
@@ -80,12 +80,11 @@
         general = {
           avatarImage = "/home/jctannu4/.face";
           radiusRatio = 0.2;
-          clockFormat = "h:mm AP";
+          clockFormat = "hh:mm";
         };
         location = {
           monthBeforeDay = true;
           name = "Rocky Mount, North Carolina";
-          use12hourFormat = true;
           useFahrenheit = true;
         };
       };
