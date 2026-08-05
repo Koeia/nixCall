@@ -2,7 +2,9 @@
   "nodes": {
     "home-manager": {
       "inputs": {
-        "nixpkgs": ["nixpkgs"]
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1780515920,
@@ -35,7 +37,9 @@
     },
     "noctalia": {
       "inputs": {
-        "nixpkgs": ["nixpkgs"],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
@@ -54,7 +58,10 @@
     },
     "noctalia-qs": {
       "inputs": {
-        "nixpkgs": ["noctalia", "nixpkgs"],
+        "nixpkgs": [
+          "noctalia",
+          "nixpkgs"
+        ],
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       },
@@ -83,7 +90,9 @@
     },
     "sops-nix": {
       "inputs": {
-        "nixpkgs": ["nixpkgs"]
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1780547341,
@@ -116,7 +125,11 @@
     },
     "treefmt-nix": {
       "inputs": {
-        "nixpkgs": ["noctalia", "noctalia-qs", "nixpkgs"]
+        "nixpkgs": [
+          "noctalia",
+          "noctalia-qs",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1775636079,
@@ -134,7 +147,9 @@
     },
     "zen-browser": {
       "inputs": {
-        "nixpkgs": ["nixpkgs"]
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1780637620,

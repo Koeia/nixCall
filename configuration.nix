@@ -43,6 +43,11 @@
     enableSSHSupport = true;
   };
 
+  services.tailscale = {
+    enable = true;
+    package = inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tailscale;
+  };
+
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

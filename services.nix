@@ -1,6 +1,12 @@
-{ ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
+
   services.udisks2.enable = true;
   services.keyd = {
     enable = true;
@@ -15,7 +21,6 @@
       };
     };
   };
-  services.tailscale.enable = true;
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
   services.power-profiles-daemon.enable = true;
