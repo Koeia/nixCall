@@ -20,6 +20,10 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+
+    package = inputs.nixpkgs-hyprland.legacyPackages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.nixpkgs-hyprland.legacyPackages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
 
   users.users.jctannu4 = {
@@ -45,7 +49,6 @@
 
   services.tailscale = {
     enable = true;
-    package = inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tailscale;
   };
 
   environment.systemPackages = with pkgs; [

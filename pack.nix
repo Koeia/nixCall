@@ -17,6 +17,7 @@
     wget
     curl
     alacritty
+    glaze
     waybar
     zed-editor
     quickshell
