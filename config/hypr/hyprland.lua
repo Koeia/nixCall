@@ -5,22 +5,35 @@ hl.monitor({
     scale    = "1",
 })
 
+local ipc = "noctalia msg "
+local mainMod = "SUPER"
 local terminal    = "alacritty"
 local browser     = "zen"
 local fileManager = "alacritty -e yazi"
-local menu        = "noctalia-shell ipc call launcher toggle"
+local menu        = ipc .. "panel-toggle launcher"
 local editor      = "zeditor"
-local nsCalendar  = "noctalia-shell ipc call calendar toggle"
-local monitor     = "noctalia-shell ipc call systemMonitor toggle"
-local lock        = "noctalia-shell ipc call lockScreen lock"
-local nsWallpaper = "noctalia-shell ipc call wallpaper toggle"
-local nsControl   = "noctalia-shell ipc call controlCenter toggle"
+local nsCalendar  = ipc .. "calendar toggle"
+local monitor     = ipc .. "control-center toggle system"
+local lock        = ipc .. "session lock"
+local nsWallpaper = ipc .. "panel-toggle wallpaper"
+local nsControl   = ipc .. "panel-toggle control-center"
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("noctalia-shell")
+    hl.exec_cmd("noctalia")
 hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE")
 hl.exec_cmd("systemctl --user restart hyprland-session.target")
 end)
+
+hl.layer_rule({
+  name = "noctalia",
+  match = {
+    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+  },
+  no_anim = true,
+  ignore_alpha = 0.5,
+  blur = true,
+  blur_popups = true,
+})
 
 
 hl.config({
@@ -146,7 +159,7 @@ hl.device({
 })
 
 
-local mainMod = "SUPER"
+
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())

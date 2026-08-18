@@ -1,8 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     fuzzel
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     p7zip
     kitty
     git-credential-manager
@@ -11,8 +12,10 @@
     package-version-server
     dolphin-emu
     cemu
+    helix
     worker
     git
+    tmux
     vim
     wget
     curl

@@ -18,12 +18,17 @@
       credential.credentialStore = "gpg";
     };
   };
+  gtk.enable = true;
   home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     x11.enable = true;
-    package = pkgs.catppuccin-cursors.mochaDark;
-    name = "mochaDark";
+    package = pkgs.kdePackages.oxygen;
+    name = "Oxygen_White";
+    size = 28;
+    dotIcons.enable = true;
   };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
