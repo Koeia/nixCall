@@ -13,6 +13,7 @@
     dolphin-emu
     cemu
     helix
+    libreoffice
     worker
     git
     tmux
