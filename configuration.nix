@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 
 {
   imports = [
@@ -50,9 +55,6 @@
   services.tailscale = {
     enable = true;
   };
-
-
-
 
   programs.nix-ld = {
     enable = true;

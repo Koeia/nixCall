@@ -5,8 +5,8 @@ hl.monitor({
     scale    = "1",
 })
 
-local ipc = "noctalia msg "
-local mainMod = "SUPER"
+local ipc         = "noctalia msg "
+local mainMod     = "SUPER"
 local terminal    = "alacritty"
 local browser     = "zen"
 local fileManager = "alacritty -e yazi"
@@ -20,19 +20,19 @@ local nsControl   = ipc .. "panel-toggle control-center"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("noctalia")
-hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE")
-hl.exec_cmd("systemctl --user restart hyprland-session.target")
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE")
+    hl.exec_cmd("systemctl --user restart hyprland-session.target")
 end)
 
 hl.layer_rule({
-  name = "noctalia",
-  match = {
-    namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
-  },
-  no_anim = true,
-  ignore_alpha = 0.5,
-  blur = true,
-  blur_popups = true,
+    name = "noctalia",
+    match = {
+        namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+    },
+    no_anim = true,
+    ignore_alpha = 0.5,
+    blur = true,
+    blur_popups = true,
 })
 
 
@@ -134,7 +134,7 @@ hl.config({
         kb_layout    = "us",
         kb_variant   = "",
         kb_model     = "",
-        kb_options   = "",
+        kb_options   = "caps:swapescape",
         kb_rules     = "",
 
         follow_mouse = 1,
@@ -143,6 +143,7 @@ hl.config({
 
         touchpad     = {
             natural_scroll = true,
+            disable_while_typing = true,
         },
     },
 })

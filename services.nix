@@ -6,10 +6,9 @@
 }:
 
 {
-
   services.udisks2.enable = true;
   services.keyd = {
-    enable = true;
+    enable = false;
     keyboards = {
       default = {
         ids = [ "*" ];

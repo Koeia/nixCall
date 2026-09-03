@@ -10,6 +10,7 @@
     libsecret
     gnome-keyring
     package-version-server
+    traceroute
     dolphin-emu
     cemu
     helix
