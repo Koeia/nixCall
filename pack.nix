@@ -9,6 +9,9 @@
     git-credential-manager
     libsecret
     gnome-keyring
+    rclone
+    rclone-browser
+    ffmpeg
     package-version-server
     traceroute
     dolphin-emu
