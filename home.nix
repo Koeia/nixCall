@@ -15,6 +15,7 @@
       init.defaultBranch = "main";
       core.editor = "vim";
       pull.rebase = false;
+      safe.directory = "/home/jctannu4";
       credential.credentialStore = "gpg";
     };
   };

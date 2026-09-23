@@ -4,13 +4,13 @@
     android-tools
     gnupg
     nmap
+    claude-code
     pass
     pinentry-all
     wireshark-cli
-    jetbrains.gateway
+    musl
+    k6
     unzip
-    jetbrains.webstorm
-    jetbrains-toolbox
     keepass
     keepassxc
     btop

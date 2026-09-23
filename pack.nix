@@ -6,22 +6,23 @@
     inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     p7zip
     kitty
+    prismlauncher
     git-credential-manager
     libsecret
     gnome-keyring
     rclone
+    proton-pass
+    proton-pass-cli
     rclone-browser
     ffmpeg
     package-version-server
     traceroute
-    dolphin-emu
-    cemu
-    helix
     libreoffice
     worker
     git
     tmux
     vim
+    xpipe
     wget
     curl
     alacritty
@@ -37,7 +38,6 @@
     yaziPlugins.chmod
     yaziPlugins.sudo
     yaziPlugins.full-border
-    termius
     ledger-live-desktop
   ];
 

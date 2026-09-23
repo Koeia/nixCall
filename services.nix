@@ -1,11 +1,13 @@
 {
-  config,
   pkgs,
-  inputs,
   ...
 }:
 
 {
+  virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.package = pkgs.waydroid-nftables;
+  environment.systemPackages = [ pkgs.wl-clipboard ];
+
   services.udisks2.enable = true;
   services.keyd = {
     enable = false;
