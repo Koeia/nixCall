@@ -8,6 +8,7 @@ hl.monitor({
 local ipc         = "noctalia msg "
 local mainMod     = "SUPER"
 local terminal    = "alacritty"
+local ssh         = "xpipe"
 local browser     = "zen"
 local fileManager = "alacritty -e yazi"
 local menu        = ipc .. "panel-toggle launcher"
@@ -165,12 +166,13 @@ hl.device({
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ssh))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(editor))
 hl.bind(mainMod .. " + M",
     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(nsWallpaper))
 hl.bind(mainMod .. " + Equal", hl.dsp.exec_cmd(nsCalendar))
 
