@@ -38,6 +38,7 @@
       enable = true;
     };
     shellAliases = {
+      pipshell = "nix-shell ~/nixCall";
       update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
     };
     initContent = ''
