@@ -35,7 +35,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          # ./noctalia.nix
+          ./noctalia.nix
           ./configuration.nix
           sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
