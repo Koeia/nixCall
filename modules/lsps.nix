@@ -4,14 +4,14 @@
     clang
     clang-tools
     gcc
+    llvmPackages_latest.clang
+    lua-language-server
     nil
     nixd
     nodejs
-    lua-language-server
-    typescript-language-server
-    typescript
-    llvmPackages_latest.clang
     python3
+    typescript
+    typescript-language-server
   ];
 
 }

@@ -2,23 +2,23 @@
 {
   environment.systemPackages = with pkgs; [
     android-tools
-    gnupg
-    nmap
-    claude-code
-    pass
-    pinentry-all
-    wireshark-cli
-    musl
+    btop
     busybox
+    claude-code
+    cmake
+    glib
+    gnumake
+    gnupg
+    gzip
     k6
-    unzip
     keepass
     keepassxc
-    btop
-    gzip
-    glib
-    cmake
+    musl
+    nmap
+    pass
+    pinentry-all
+    unzip
+    wireshark-cli
     zip
-    gnumake
   ];
 }

@@ -6,11 +6,11 @@
 
 {
   imports = [
-    ./services.nix
+    ./modules/services.nix
     /etc/nixos/hardware-configuration.nix
-    ./lsps.nix
-    ./devtools.nix
-    ./pack.nix
+    ./modules/lsps.nix
+    ./modules/devtools.nix
+    ./modules/pack.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
