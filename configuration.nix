@@ -36,13 +36,14 @@
       "wheel"
       "networkmanager"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = with pkgs; [
       tree
     ];
   };
 
   programs.firefox.enable = true;
+  programs.fish.enable = true;
   programs.zsh.enable = true;
 
   programs.gnupg.agent = {

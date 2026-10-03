@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.username = "jctannu4";
@@ -30,30 +30,80 @@
     dotIcons.enable = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting = {
+  /*
+    programs.zsh = {
       enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting = {
+        enable = true;
+      };
+      shellAliases = {
+        pipshell = "nix-shell ~/nixCall";
+        update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
+        nix-fshell = "nix-shell --run fish";
+      };
+      initContent = ''
+        		${pkgs.fastfetch}/bin/fastfetch
+         		'';
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ ];
+        theme = "aussiegeek";
+      };
+      profileExtra = ''
+        if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+          exec start-hyprland
+        fi
+      '';
     };
+  */
+
+  programs.fish = {
+    enable = true;
+
     shellAliases = {
       pipshell = "nix-shell ~/nixCall";
       update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
+      nix-fshell = "nix-shell --run fish";
     };
-    initContent = ''
-      		${pkgs.fastfetch}/bin/fastfetch
-      		'';
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ ];
-      theme = "aussiegeek";
+    functions = {
+      fish_greeting = "${pkgs.fastfetch}/bin/fastfetch";
     };
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+    loginShellInit = ''
+      if test -z "$WAYLAND_DISPLAY"; and test "$XDG_VTNR" = 1
         exec start-hyprland
-      fi
+      end
     '';
+
+    plugins = [
+      {
+        name = "damin";
+        src = pkgs.fetchFromGitHub {
+          owner = "miniex";
+          repo = "fish-theme-damin";
+          rev = "v1.3.0";
+          hash = "sha256-qjsYROys+Z97fjXn9m0gOlNG9ohDkYpMpDtVMvQ9OsI=";
+        };
+      }
+
+      {
+        name = "autopair";
+        src = pkgs.fishPlugins.autopair.src;
+      }
+      {
+        name = "z";
+        src = pkgs.fishPlugins.z.src;
+      }
+      {
+        name = "git";
+        src = pkgs.fishPlugins.plugin-git.src;
+      }
+      {
+        name = "done";
+        src = pkgs.fishPlugins.done.src;
+      }
+    ];
   };
 
   home.file.".config/hypr".source = ./config/hypr;

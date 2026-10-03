@@ -11,6 +11,7 @@
     libsecret
     gnome-keyring
     rclone
+    fish
     proton-pass
     proton-pass-cli
     rclone-browser

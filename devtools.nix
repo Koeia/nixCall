@@ -9,6 +9,7 @@
     pinentry-all
     wireshark-cli
     musl
+    busybox
     k6
     unzip
     keepass
