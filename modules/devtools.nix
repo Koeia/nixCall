@@ -17,6 +17,7 @@
     nmap
     pass
     pinentry-all
+    pv
     unzip
     wireshark-cli
     zip
