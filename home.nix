@@ -78,9 +78,7 @@
   };
 
   home.packages = with pkgs; [
-    git
     git-credential-manager
-    git-credential-oauth
     (pkgs.writeShellApplication {
       name = "ns";
       runtimeInputs = with pkgs; [

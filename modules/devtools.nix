@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
     android-tools
     btop
-    busybox
+    (lib.loPrio busybox)
     claude-code
     cmake
     glib

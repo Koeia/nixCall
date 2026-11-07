@@ -5,10 +5,7 @@
     alacritty
     curl
     ffmpeg
-    fish
     fuzzel
-    git
-    git-credential-manager
     glaze
     gnome-keyring
     kitty
@@ -20,7 +17,6 @@
     prismlauncher
     proton-pass
     proton-pass-cli
-    quickshell
     rclone
     rclone-browser
     tmux
@@ -28,7 +24,6 @@
     udiskie
     usbutils
     vim
-    waybar
     wget
     worker
     xpipe
