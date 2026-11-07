@@ -24,8 +24,6 @@
   };
   virtualisation.docker.enable = true;
   services.openssh.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
   services.gnome.gnome-keyring.enable = true;
   security.polkit.enable = true;
 }

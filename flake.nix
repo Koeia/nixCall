@@ -14,7 +14,6 @@
     };
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
@@ -24,31 +23,35 @@
 
   outputs =
     inputs@{
-      self,
       nixpkgs,
       home-manager,
       sops-nix,
       ...
     }:
+    let
+      mkHost =
+        hostDir:
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            hostDir
+            ./noctalia.nix
+            ./configuration.nix
+            sops-nix.nixosModules.sops
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                # same as now
+              };
+            }
+          ];
+        };
+    in
     {
-      nixosConfigurations.nixCall = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./noctalia.nix
-          ./configuration.nix
-          sops-nix.nixosModules.sops
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.jctannu4 = import ./home.nix;
-              backupFileExtension = "backup";
-            };
-          }
-        ];
+      nixosConfigurations = {
+        nixCall = mkHost ./hosts/laptop;
+        nixDesk = mkHost ./hosts/desktop;
       };
     };
-
 }

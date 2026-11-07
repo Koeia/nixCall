@@ -7,7 +7,6 @@
 {
   imports = [
     ./modules/services.nix
-    /etc/nixos/hardware-configuration.nix
     ./modules/lsps.nix
     ./modules/devtools.nix
     ./modules/pack.nix
@@ -15,9 +14,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "nixCall";
   networking.networkmanager.enable = true;
-  hardware.bluetooth.enable = true;
 
   time.timeZone = "America/New_York";
 
@@ -72,11 +69,16 @@
     allowUnfree = true;
   };
 
+  nix.settings = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
-
-  system.stateVersion = "26.05";
 
 }

@@ -64,7 +64,7 @@
 
     shellAliases = {
       pipshell = "nix-shell ~/nixCall";
-      update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
+      update = "sudo nixos-rebuild switch --flake ~/nixCall";
       nix-fshell = "nix-shell --run fish";
     };
     functions = {
