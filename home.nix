@@ -30,35 +30,6 @@
     dotIcons.enable = true;
   };
 
-  /*
-    programs.zsh = {
-      enable = true;
-      enableCompletion = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting = {
-        enable = true;
-      };
-      shellAliases = {
-        pipshell = "nix-shell ~/nixCall";
-        update = "sudo nixos-rebuild switch --flake ~/nixCall#nixCall --impure";
-        nix-fshell = "nix-shell --run fish";
-      };
-      initContent = ''
-        		${pkgs.fastfetch}/bin/fastfetch
-         		'';
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ ];
-        theme = "aussiegeek";
-      };
-      profileExtra = ''
-        if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-          exec start-hyprland
-        fi
-      '';
-    };
-  */
-
   programs.fish = {
     enable = true;
 
@@ -105,8 +76,6 @@
       }
     ];
   };
-
-  home.file.".config/hypr".source = ./config/hypr;
 
   home.packages = with pkgs; [
     git

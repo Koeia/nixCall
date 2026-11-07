@@ -37,12 +37,16 @@
           modules = [
             hostDir
             ./noctalia.nix
+            ./hyprland.nix
             ./configuration.nix
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
             {
               home-manager = {
-                # same as now
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.jctannu4 = import ./home.nix;
+                backupFileExtension = "backup";
               };
             }
           ];
@@ -51,7 +55,7 @@
     {
       nixosConfigurations = {
         nixCall = mkHost ./hosts/laptop;
-        nixDesk = mkHost ./hosts/desktop;
+        # nixDesk = mkHost ./hosts/desktop;
       };
     };
 }
