@@ -26,7 +26,7 @@
     x11.enable = true;
     package = pkgs.kdePackages.oxygen;
     name = "Oxygen_White";
-    size = 28;
+    size = 20;
     dotIcons.enable = true;
   };
 

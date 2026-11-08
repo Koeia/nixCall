@@ -21,6 +21,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true;
   };
 
   users.users.jctannu4 = {

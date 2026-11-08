@@ -48,7 +48,7 @@
 
         shell = {
           panel_anchor_bar = "widgets";
-          panel.transparency_mode = "soft";
+          panel.transparency_mode = "glass";
           launcher.colorize_icons = true;
           window_switcher.colorize_icons = true;
           screen_time_colorize_icons = true;
@@ -88,7 +88,7 @@
         };
 
         wallpaper.default.path = "/home/jctannu4/Wallpapers/black-hole-wallpaper.png";
-
+        wallpaper.directory = "~/Wallpapers";
         location.address = "Rocky Mount, NC";
         weather.unit = "imperial";
 

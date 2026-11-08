@@ -71,6 +71,11 @@ in
       # hyprland-session.target — replaces the two exec lines from the old file.
       systemd.enable = true;
 
+      extraConfig = ''
+        -- Noctalia colors (generated at ~/.config/hypr/noctalia.lua)
+        local ok, noctalia = pcall(require, "noctalia")
+        if ok then noctalia.apply_theme() end
+      '';
       settings = {
         monitor = {
           output = "";
@@ -252,15 +257,14 @@ in
               // curve
               // extra;
             bez = name: { bezier = name; };
-            spring = name: { spring = name; };
           in
           [
             (anim "global" 10 (bez "default") { })
             (anim "border" 5.39 (bez "easeOutQuint") { })
-            (anim "windows" 4.79 (spring "easy") { })
-            (anim "windowsIn" 4.1 (spring "easy") { style = "popin 87%"; })
+            (anim "windows" 4.79 (bez "easeOutQuint") { })
+            (anim "windowsIn" 2.5 (bez "easeOutQuint") { style = "popin 87%"; })
             (anim "windowsOut" 1.49 (bez "linear") { style = "popin 87%"; })
-            (anim "fadeIn" 1.73 (bez "almostLinear") { })
+            (anim "fadeIn" 1.0 (bez "almostLinear") { })
             (anim "fadeOut" 1.46 (bez "almostLinear") { })
             (anim "fade" 3.03 (bez "quick") { })
             (anim "layers" 3.81 (bez "easeOutQuint") { })
