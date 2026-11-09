@@ -7,7 +7,6 @@
     ffmpeg
     fuzzel
     glaze
-    gnome-keyring
     kitty
     ledger-live-desktop
     libreoffice
