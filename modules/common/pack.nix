@@ -18,6 +18,7 @@
     proton-pass-cli
     rclone
     rclone-browser
+    thunar
     tmux
     traceroute
     udiskie
