@@ -2,7 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/optional/hyprland.nix
-    ../../modules/optional/hyprland.nix
+    ../../modules/optional/noctalia.nix
   ];
   networking.hostName = "nixCall";
   hardware.bluetooth.enable = true;
