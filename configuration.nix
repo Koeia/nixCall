@@ -6,10 +6,7 @@
 
 {
   imports = [
-    ./modules/services.nix
-    ./modules/lsps.nix
-    ./modules/devtools.nix
-    ./modules/pack.nix
+    ./modules/common
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -17,12 +14,6 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/New_York";
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-  };
 
   users.users.jctannu4 = {
     isNormalUser = true;

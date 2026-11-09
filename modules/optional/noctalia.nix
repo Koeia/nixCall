@@ -94,7 +94,7 @@
 
         # Names with a dash have to be quoted in Nix.
         widget = {
-          "control-center".glyph = "brand-react";
+          "control-center".glyph = "snowflake";
 
           battery = {
             display_mode = "graphic";

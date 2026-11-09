@@ -20,16 +20,6 @@
     };
   };
   gtk.enable = true;
-  home.pointerCursor = {
-    enable = true;
-    gtk.enable = true;
-    x11.enable = true;
-    package = pkgs.kdePackages.oxygen;
-    name = "Oxygen_White";
-    size = 20;
-    dotIcons.enable = true;
-  };
-
   programs.fish = {
     enable = true;
 
@@ -41,11 +31,6 @@
     functions = {
       fish_greeting = "${pkgs.fastfetch}/bin/fastfetch";
     };
-    loginShellInit = ''
-      if test -z "$WAYLAND_DISPLAY"; and test "$XDG_VTNR" = 1
-        exec start-hyprland
-      end
-    '';
 
     plugins = [
       {

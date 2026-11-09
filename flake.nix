@@ -35,8 +35,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             hostDir
-            ./noctalia.nix
-            ./hyprland.nix
             ./configuration.nix
             sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager

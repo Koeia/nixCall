@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 let
   # Helpers for writing Lua from Nix.
   # `inline` passes text through as raw Lua instead of a quoted string.
@@ -56,7 +56,34 @@ let
   );
 in
 {
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
+  };
+
+  services.gnome.gnome-keyring.enable = true;
+
   home-manager.users.jctannu4 = {
+    programs.fish.loginShellInit = ''
+      if test -z "$WAYLAND_DISPLAY"; and test "$XDG_VTNR" = 1
+        exec start-hyprland
+      end
+    '';
+
+    home.pointerCursor = {
+      enable = true;
+      package = pkgs.kdePackages.breeze;
+      name = "Breeze_Light";
+      size = 24;
+      x11.enable = true;
+    };
+
+    dconf.settings."org/gnome/desktop/interface" = {
+      cursor-theme = "Breeze_Light";
+      cursor-size = 24;
+    };
+
     wayland.windowManager.hyprland = {
       enable = true;
       configType = "lua";

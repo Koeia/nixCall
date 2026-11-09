@@ -1,5 +1,9 @@
 { pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/optional/hyprland.nix
+    ../../modules/optional/hyprland.nix
+  ];
   networking.hostName = "nixCall";
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
