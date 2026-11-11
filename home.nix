@@ -19,7 +19,6 @@
       credential.credentialStore = "gpg";
     };
   };
-  gtk.enable = true;
   programs.fish = {
     enable = true;
 
