@@ -11,4 +11,7 @@
     elisa
     khelpcenter
   ];
+  environment.systemPackages = with pkgs; [
+    gnome-clocks
+  ];
 }
