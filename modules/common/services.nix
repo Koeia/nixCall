@@ -9,19 +9,6 @@
   environment.systemPackages = [ pkgs.wl-clipboard ];
 
   services.udisks2.enable = true;
-  services.keyd = {
-    enable = false;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            capslock = "esc";
-          };
-        };
-      };
-    };
-  };
   virtualisation.docker.enable = true;
   security.polkit.enable = true;
 }

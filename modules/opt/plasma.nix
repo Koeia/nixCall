@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm = {
@@ -6,9 +6,13 @@
     wayland.enable = true;
   };
 
+
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     konsole
     elisa
     khelpcenter
+  ];
+  environment.systemPackages = with pkgs; [
+    gnome-clocks
   ];
 }

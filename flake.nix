@@ -52,7 +52,7 @@
     {
       nixosConfigurations = {
         nixCall = mkHost ./hosts/laptop;
-        # nixDesk = mkHost ./hosts/desktop;
+        nixDesk = mkHost ./hosts/desktop;
       };
     };
 }
