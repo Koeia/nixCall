@@ -83,6 +83,7 @@
               "zed"
               "hyprtoolkit"
               "yazi"
+              "thunar"
             ];
           };
         };
