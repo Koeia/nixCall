@@ -2,6 +2,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/opt/plasma.nix
+    ../../modules/opt/audio.nix
+    ../../modules/opt/virt.nix
     ../../modules/opt/gaming.nix
   ];
   networking.hostName = "nixDesk";
