@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     android-tools
+		bootdev-cli
     btop
     (lib.lowPrio busybox)
     claude-code
